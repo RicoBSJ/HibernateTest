@@ -9,7 +9,8 @@ public class Personnes {
 	private String prenomPersonne;
 	private Date datenaissPersonne;
 
-	public Personnes(String nomPersonne, String prenomPersonne, Date datenaissPersonne) {
+	public Personnes(Integer idpersonnes, String nomPersonne, String prenomPersonne, Date datenaissPersonne) {
+		this.idPersonne = idpersonnes;
 		this.nomPersonne = nomPersonne;
 		this.prenomPersonne = prenomPersonne;
 		this.datenaissPersonne = datenaissPersonne;
