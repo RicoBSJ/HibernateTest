@@ -1,21 +1,15 @@
-<?xml version="1.0"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 2 janv. 2020 12:06:04 by Hibernate Tools 3.5.0.Final -->
+<?xml version="1.0"?><!DOCTYPE hibernate-mapping
+  PUBLIC "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd">
 <hibernate-mapping>
-    <class name="Modele.Personnes" table="PERSONNES">
-        <id name="idPersonne" type="java.lang.Integer">
-            <column name="IDPERSONNE" />
-            <generator class="assigned" />
-        </id>
-        <property name="nomPersonne" type="java.lang.String">
-            <column name="NOMPERSONNE" />
-        </property>
-        <property name="prenomPersonne" type="java.lang.String">
-            <column name="PRENOMPERSONNE" />
-        </property>
-        <property name="datenaissPersonne" type="java.util.Date">
-            <column name="DATENAISSPERSONNE" />
-        </property>
-    </class>
+	<class name="Personnes" table="personnes">
+		<id name="idPersonne" type="int" column="idpersonne">
+			<generator class="native" />
+		</id>
+		<property name="nomPersonne" type="string" not-null="true" />
+		<property name="prenomPersonne" type="string" not-null="true" />
+		<property name="datenaissPersonne" type="date">
+			<meta attribute="field-description">date de naissance</meta>
+		</property>
+	</class>
 </hibernate-mapping>
