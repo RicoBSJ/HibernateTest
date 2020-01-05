@@ -9,7 +9,7 @@ public class TestHibernate2 {
 	public static void main(String args[]) throws Exception {
 		Configuration config = new Configuration();
 		config.addClass(Personnes.class);
-		SessionFactory sessionFactory = config.buildSessionFactory();
+		SessionFactory sessionFactory = config.configure("hibernate.cfg.xml").buildSessionFactory();
 		Session session = sessionFactory.openSession();
 
 		try {

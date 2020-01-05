@@ -17,7 +17,7 @@ public class TestHibernate1 {
 		Transaction tx = null;
 		try {
 			tx = session.beginTransaction();
-			Personnes personne = new Personnes(1, "nom3", "prenom3", new Date());
+			Personnes personne = new Personnes("nom3", "prenom3", new Date());
 			session.save(personne);
 			session.flush();
 			tx.commit();
